@@ -38,6 +38,17 @@ app.post('/alunos', (req, res) => {
     }); 
 });
 
+app.get('/alunos',(req,res)=>{
+    const sql = 'SELECT * FROM alunos';
+    db.query(sql,(err,results)=>{
+        if (err) 
+        {
+            return res.status(500).json({ error: 'Erro ao consultar aluno !'});
+        }
+        res.json(results);
+    })
+});
+
 //Iniciando o servidor 
 app.listen(PORT, () =>{
     console.log(`Servidor rodando em http://localhost:${PORT}`);
