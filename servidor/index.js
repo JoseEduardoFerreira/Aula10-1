@@ -28,10 +28,11 @@ db.connect((erro) => {
 app.post('/alunos', (req, res) => {
     const { nome, cidade, estado } = req.body;
 
-    const sql = 'INSERT INTO aluno (nome, cidade, estado) VALUES (?, ?, ?)';
+    const sql = 'INSERT INTO alunos (nome, cidade, estado) VALUES (?, ?, ?)';
     db.query(sql, [nome, cidade, estado], (err, result) => {
     if (err) 
     {
+        console.log(err);
         return res.status(500).json({ error: 'Erro ao cadastrar aluno !'});
     }
     res.status(201).json({ message : 'Aluno cadastrado com sucesso!', id:result.insertId});
