@@ -59,8 +59,8 @@ export default function Consulta()
                             <td>{aluno.cidade}</td>
                             <td>{aluno.estado}</td>
                             <td>
-                                <button type='buton' onClick={() => alterar(aluno.codigo)}>Alterar</button>
-                                <button type='buton' onClick={() => alterar(aluno.codigo)}>Excluir</button>
+                                <button type='button' onClick={() => alterar(aluno.codigo)}>Alterar</button>
+                                <button type='button' onClick={() => excluir(aluno.codigo)}>Excluir</button>
                             </td>
                         </tr>
 
