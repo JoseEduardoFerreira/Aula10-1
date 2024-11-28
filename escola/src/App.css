@@ -47,7 +47,7 @@ header a + a{
   box-shadow: 0px 0px 10px black;
 }
 
-.destaque input[type=text]
+.destaque .input[type=text]
 {
   width: 90%;
   padding: 10px;
